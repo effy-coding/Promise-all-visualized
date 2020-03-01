@@ -34,17 +34,16 @@
             display: block;
         }
 
-        footer {
-            position:fixed; 
+        header {
             left:15px; 
-            bottom:15px; 
             width:100%; 
         }
     </style>
     <title>Promise.all visualized</title>
 </head>
 <body>
-    <h1>Promise.all visualized</h1>
+    <header>Author: Sohn Dangen | <a href="https://github.com/dangen-effy/Promise-all-visualized">GitHub</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">MDN</a></header>
+    <h1 style="margin-bottom: 0;">Promise.all visualized</h1>
     <pre>
         <code>
     console.log('Hello. Promise.all')
@@ -58,6 +57,7 @@
     console.log('Jobs done')
         </code>
     </pre>
+    
     <div id="anime-demo">
         <svg>
             <text id="text0" x="0" y="15" fill="red">Pending ...</text>
@@ -77,6 +77,6 @@
         <p id="console0" style="color: transparent;">> Hello. Promise.all</p>
         <p id="console1" style="color: transparent;">> Jobs done</p>
     </div>
-    <footer>Author: Sohn Dangen | <a href="https://github.com/dangen-effy/Promise-all-visualized">GitHub</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">MDN</a></footer>
+    
 </body>
 </html>
