@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="anime.min.js"></script>
+    <script src="index.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            flex-flow: column;
+        }
+
+        svg {
+            width: 100%;
+            height: 50px;
+        }
+
+        #anime-demo {
+            text-align: left;
+            width: 100%;
+            height: 100%;
+        }
+
+        .promise {
+            color: red;
+        }
+
+        pre code {
+            background-color: #eee;
+            border: 1px solid #999;
+            display: block;
+        }
+
+        footer {
+            position:fixed; 
+            left:15px; 
+            bottom:15px; 
+            width:100%; 
+        }
+    </style>
+    <title>Promise.all visualized</title>
+</head>
+<body>
+    <h1>Promise.all visualized</h1>
+    <pre>
+        <code>
+    console.log('Hello. Promise.all')
+
+    const task0 = new Promise(...)
+    const task1 = new Promise(...)
+    const task2 = new Promise(...)
+
+    await Promise.all([task0, task1, task2])
+
+    console.log('Jobs done')
+        </code>
+    </pre>
+    <div id="anime-demo">
+        <svg>
+            <text id="text0" x="0" y="15" fill="red">Pending ...</text>
+            <circle id="circle0" class="circle" cx="25" cy="25" r="12" fill="#ED6E46" stroke="#000" stroke-width="3"/>
+        </svg>
+        <svg>
+            <text id="text1" x="0" y="15" fill="red">Pending ...</text>
+            <circle id="circle1" class="circle" cx="25" cy="25" r="12" fill="#ED6E46" stroke="#000" stroke-width="3"/>
+        </svg>
+        <svg>
+            <text id="text2" x="0" y="15" fill="red">Pending ...</text>
+            <circle id="circle2" class="circle" cx="25" cy="25" r="12" fill="#ED6E46" stroke="#000" stroke-width="3"/>
+        </svg>
+
+        <p style="font-weight: bold;">Promise.all [<span class="promise" id="promise0">Task0</span>, <span  class="promise" id="promise1">Task1</span>, <span  class="promise" id="promise2">Task2</span>] <span id="promise-status">Pending ...</span></p>
+        <h3>💻 Outputs:</h3>
+        <p id="console0" style="color: transparent;">> Hello. Promise.all</p>
+        <p id="console1" style="color: transparent;">> Jobs done</p>
+    </div>
+    <footer>Author: Sohn Dangen | <a href="https://github.com/dangen-effy/Promise-all-visualized">GitHub</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">MDN</a></footer>
+</body>
+</html>
